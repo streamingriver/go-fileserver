@@ -15,5 +15,5 @@ func main() {
 	flag.Parse()
 	http.Handle("/", http.FileServer(http.Dir(*flagPath)))
 	log.Printf("Starting server on %s", *flagBindTo)
-	log.Fatal(http.ListenAndServe(*flagBindTo), nil)
+	log.Fatal(http.ListenAndServe(*flagBindTo, nil))
 }
